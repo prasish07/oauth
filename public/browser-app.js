@@ -72,7 +72,7 @@ checkToken();
 const googleButton = document.getElementById("google");
 
 googleButton.addEventListener("click", () => {
-  window.location.href = "http://localhost:3000/api/v1/get";
+  window.location.href = "https://oauth-testing-server.onrender.com/api/v1/get";
 });
 
 // Function to extract the token from the URL query parameters
