@@ -26,7 +26,7 @@ const googleOauthhandler = async (req, res) => {
   });
 
   //redirect to dashboard
-  res.redirect(`http://localhost:3000?token=${token}`);
+  res.redirect(`https://oauth-testing-server.onrender.com?token=${token}`);
 };
 
 module.exports = googleOauthhandler;
