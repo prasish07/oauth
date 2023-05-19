@@ -79,11 +79,22 @@ googleButton.addEventListener("click", () => {
 function extractTokenFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
   console.log(urlParams.get("token"));
+
   return urlParams.get("token");
 }
 
 // Extract the token from the URL and store it in local storage
 const token = extractTokenFromURL();
 if (token) {
+  formAlertDOM.style.display = "block";
+  formAlertDOM.textContent = "login successfull";
+
+  formAlertDOM.classList.add("text-success");
+  usernameInputDOM.value = "";
+  passwordInputDOM.value = "";
+
+  resultDOM.innerHTML = "";
+  tokenDOM.textContent = "token present";
+  tokenDOM.classList.add("text-success");
   localStorage.setItem("token", token);
 }
