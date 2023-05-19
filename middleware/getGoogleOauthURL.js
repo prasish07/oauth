@@ -17,6 +17,7 @@ const getGoogleOauthURL = async () => {
     prompt: "consent",
     scope: scopes,
   });
+  console.log(process.env.GOOGLE_REDIRECT);
   return url;
 };
 module.exports = getGoogleOauthURL;
