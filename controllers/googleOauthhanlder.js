@@ -10,7 +10,7 @@ const oauth2Client = new google.auth.OAuth2(
 
 const googleOauthhandler = async (req, res) => {
   const code = req.query.code;
-  // console.log(code);
+  console.log(code);
   try {
     const { tokens } = await oauth2Client.getToken(code);
 
